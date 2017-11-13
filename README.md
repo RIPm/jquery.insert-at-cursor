@@ -25,6 +25,9 @@ or
 
 #### javascript
 ```js
+// first tiem to init
+$.initCursor('#foo');
+
 // Normal string
 $("#foo").insertAtCursor('bar');
 

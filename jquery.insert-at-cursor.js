@@ -22,6 +22,7 @@
         });
         $(dom).each(function() {
             if(!$(this).hasfocus) {
+                console.log(1)
                 $(this).focus();
                 var range = saveSelection();
                 range.selectNodeContents(this);
@@ -50,6 +51,7 @@
                         $(input).data(DATANAME)
                     );
                     range.collapse(false);
+                    console.log(range);
                     node = range.createContextualFragment(text);
 
                     var c = node.lastChild;

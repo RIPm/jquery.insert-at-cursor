@@ -4,7 +4,7 @@
         <title>Insert string/dom at caret</title>
         <link href="bundle.css" rel="stylesheet"></link>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="jquery.insert-at-cursor.min.js"></script>
+        <script src="jquery.insert-at-cursor.js"></script>
         <style>
          #a {
              border: 1px solid #ccc;
@@ -26,7 +26,10 @@
         <h3>Contenteditable div</h3>
         <hr/>
         <div contenteditable="true" class="a" id="a">
-
+            <span contenteditable='false'>{456}</span>
+            1231
+            <span contenteditable='false'>{456}</span>
+            23
         </div>
         <br/>
         <div contenteditable="true" class="a" id="o">
@@ -49,6 +52,8 @@
         <script>
 
          $(function() {
+             $.initCursor('.a');
+
              $('#b').click(function() {
                  $("#a").insertAtCursor("<span contenteditable='false'>{456}</span>");
              })
