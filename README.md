@@ -31,8 +31,8 @@ $.initCursor('#foo');
 // Normal string
 $("#foo").insertAtCursor('bar');
 
-// At contenteditable dom
+// Contenteditable dom
 $("#foo").insertAtCursor('<span>bar</span>');
-// At contenteditable dom (functions like rich text editors)
+// Contenteditable dom (functions like rich text editors)
 $("#foo").insertAtCursor('<span contenteditable="false">bar</span>');
 ```
